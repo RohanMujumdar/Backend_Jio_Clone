@@ -60,7 +60,7 @@ app.use(express.json())
 app.use(cookieParser());
 const AuthRouter=require("./Router/AuthRouter")
 const HomeRouter=require("./Router/HomeRouter")
-const MovieRouter=require("./Router/movieRouter")
+const MovieRouter=require("./Router/MovieRouter")
 const TVShowRouter=require("./Router/TVShowRouter")
 const UserRouter=require("./Router/UserRouter")
 
