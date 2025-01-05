@@ -71,6 +71,11 @@ app.use("/api/movie", MovieRouter)
 app.use("/api/tvshow", TVShowRouter)
 app.use("/api/user", UserRouter)
 
+app.use("/", function(req, res){
+    res.status(200).json({
+        message:"Hello from server"
+    })
+})
 
 app.listen(3000, function(){
     console.log("Server started at port 3000.")
