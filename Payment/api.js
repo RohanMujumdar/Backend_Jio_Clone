@@ -7,7 +7,7 @@ const cors=require("cors")
 dotenv.config(dotenv.config({ path: "../.env" }));
 
 
-const {PORT, RAZORPAY_PUBLIC_KEY, RAZORPAY_PRIVATE_KEY}=process.env
+const {RAZORPAY_PUBLIC_KEY, RAZORPAY_PRIVATE_KEY}=process.env
 const uid=new ShortId({length:10})
 
 // Our instance is getting created with the help of our private key and public key
@@ -60,6 +60,9 @@ app.post("/verify", function(){
     // in this function, razorpay has to confirm that payment is done and 
     // update the status of the user.
 })
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server is running on port ${process.env.PORT || 3000}`);
-});
+
+
+const PORT=process.env.PORT||3000;
+app.listen(PORT, function () {
+    console.log(`Server started on port ${PORT}`)
+})
