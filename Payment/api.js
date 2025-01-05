@@ -60,7 +60,6 @@ app.post("/verify", function(){
     // in this function, razorpay has to confirm that payment is done and 
     // update the status of the user.
 })
-app.listen(PORT, function(){
-    console.log(`Server is running on port ${PORT}.`)
-})
-
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server is running on port ${process.env.PORT || 3000}`);
+});
